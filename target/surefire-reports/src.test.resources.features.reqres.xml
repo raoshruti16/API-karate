@@ -1,0 +1,531 @@
+<testsuite failures="1" name="src/test/resources/features/reqres.feature" skipped="0" tests="10" time="5.978989">
+  <testcase classname="src.test.resources.features.reqres" name="01 Test the GET listUsers" time="1.538508">
+    <system-out>Given def Base = 'https://reqres.in/api/users' ............................ passed
+* url Base + '?page=2' .................................................... passed
+When method GET ........................................................... passed
+And status 200 ............................................................ passed
+Then def len1 = response.data.length ...................................... passed
+Given url Base ............................................................ passed
+When method GET ........................................................... passed
+And status 200 ............................................................ passed
+Then def len2 = response.data.length ...................................... passed
+Then assert len1+len2 == 12 ............................................... passed
+Then assert len1+len2 == response.total ................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.resources.features.reqres" name="02 Test update user" time="0.562549">
+    <system-out>Given def Base = 'https://reqres.in/api/users' ............................ passed
+* url Base + '?page=2' .................................................... passed
+When method GET ........................................................... passed
+And status 200 ............................................................ passed
+Then def len1 = response.data.length ...................................... passed
+Given url Base ............................................................ passed
+When method GET ........................................................... passed
+And status 200 ............................................................ passed
+Then def len2 = response.data.length ...................................... passed
+Then assert len1+len2 == 12 ............................................... passed
+Then assert len1+len2 == response.total ................................... passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base + '/' + 3 .................................................. passed
+When request { "name":"Shruti", "job":"Engineer" } ........................ passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed
+And match response contains { "name":"Shruti", "job":"Engineer" } ......... passed
+And print "Updated at " + response.updatedAt .............................. passed</system-out>
+  </testcase>
+  <testcase classname="src.test.resources.features.reqres" name="02 Test update user" time="0.568839">
+    <system-out>Given def Base = 'https://reqres.in/api/users' ............................ passed
+* url Base + '?page=2' .................................................... passed
+When method GET ........................................................... passed
+And status 200 ............................................................ passed
+Then def len1 = response.data.length ...................................... passed
+Given url Base ............................................................ passed
+When method GET ........................................................... passed
+And status 200 ............................................................ passed
+Then def len2 = response.data.length ...................................... passed
+Then assert len1+len2 == 12 ............................................... passed
+Then assert len1+len2 == response.total ................................... passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base + '/' + 3 .................................................. passed
+When request { "name":"Shruti", "job":"Engineer" } ........................ passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed
+And match response contains { "name":"Shruti", "job":"Engineer" } ......... passed
+And print "Updated at " + response.updatedAt .............................. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base + '/' + 9 .................................................. passed
+When request { "name":"Shruti", "job":"Engineer" } ........................ passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed
+And match response contains { "name":"Shruti", "job":"Engineer" } ......... passed
+And print "Updated at " + response.updatedAt .............................. passed</system-out>
+  </testcase>
+  <testcase classname="src.test.resources.features.reqres" name="03 Test create user" time="0.542823">
+    <system-out>Given def Base = 'https://reqres.in/api/users' ............................ passed
+* url Base + '?page=2' .................................................... passed
+When method GET ........................................................... passed
+And status 200 ............................................................ passed
+Then def len1 = response.data.length ...................................... passed
+Given url Base ............................................................ passed
+When method GET ........................................................... passed
+And status 200 ............................................................ passed
+Then def len2 = response.data.length ...................................... passed
+Then assert len1+len2 == 12 ............................................... passed
+Then assert len1+len2 == response.total ................................... passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base + '/' + 3 .................................................. passed
+When request { "name":"Shruti", "job":"Engineer" } ........................ passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed
+And match response contains { "name":"Shruti", "job":"Engineer" } ......... passed
+And print "Updated at " + response.updatedAt .............................. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base + '/' + 9 .................................................. passed
+When request { "name":"Shruti", "job":"Engineer" } ........................ passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed
+And match response contains { "name":"Shruti", "job":"Engineer" } ......... passed
+And print "Updated at " + response.updatedAt .............................. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base ............................................................ passed
+When request { "name": Shruti, "job": Software Engineer} .................. passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And match response contains { "name":Shruti, "job":Software Engineer} ..... passed
+And print "Created at " + response.createdAt .............................. passed
+And print "id of new user is " + response.id .............................. passed</system-out>
+  </testcase>
+  <testcase classname="src.test.resources.features.reqres" name="03 Test create user" time="0.503418">
+    <system-out>Given def Base = 'https://reqres.in/api/users' ............................ passed
+* url Base + '?page=2' .................................................... passed
+When method GET ........................................................... passed
+And status 200 ............................................................ passed
+Then def len1 = response.data.length ...................................... passed
+Given url Base ............................................................ passed
+When method GET ........................................................... passed
+And status 200 ............................................................ passed
+Then def len2 = response.data.length ...................................... passed
+Then assert len1+len2 == 12 ............................................... passed
+Then assert len1+len2 == response.total ................................... passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base + '/' + 3 .................................................. passed
+When request { "name":"Shruti", "job":"Engineer" } ........................ passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed
+And match response contains { "name":"Shruti", "job":"Engineer" } ......... passed
+And print "Updated at " + response.updatedAt .............................. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base + '/' + 9 .................................................. passed
+When request { "name":"Shruti", "job":"Engineer" } ........................ passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed
+And match response contains { "name":"Shruti", "job":"Engineer" } ......... passed
+And print "Updated at " + response.updatedAt .............................. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base ............................................................ passed
+When request { "name": Shruti, "job": Software Engineer} .................. passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And match response contains { "name":Shruti, "job":Software Engineer} ..... passed
+And print "Created at " + response.createdAt .............................. passed
+And print "id of new user is " + response.id .............................. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base ............................................................ passed
+When request { "name": Shreya, "job": Student} ............................ passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And match response contains { "name":Shreya, "job":Student} ............... passed
+And print "Created at " + response.createdAt .............................. passed
+And print "id of new user is " + response.id .............................. passed</system-out>
+  </testcase>
+  <testcase classname="src.test.resources.features.reqres" name="04 Test delete user" time="0.570001">
+    <system-out>Given def Base = 'https://reqres.in/api/users' ............................ passed
+* url Base + '?page=2' .................................................... passed
+When method GET ........................................................... passed
+And status 200 ............................................................ passed
+Then def len1 = response.data.length ...................................... passed
+Given url Base ............................................................ passed
+When method GET ........................................................... passed
+And status 200 ............................................................ passed
+Then def len2 = response.data.length ...................................... passed
+Then assert len1+len2 == 12 ............................................... passed
+Then assert len1+len2 == response.total ................................... passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base + '/' + 3 .................................................. passed
+When request { "name":"Shruti", "job":"Engineer" } ........................ passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed
+And match response contains { "name":"Shruti", "job":"Engineer" } ......... passed
+And print "Updated at " + response.updatedAt .............................. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base + '/' + 9 .................................................. passed
+When request { "name":"Shruti", "job":"Engineer" } ........................ passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed
+And match response contains { "name":"Shruti", "job":"Engineer" } ......... passed
+And print "Updated at " + response.updatedAt .............................. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base ............................................................ passed
+When request { "name": Shruti, "job": Software Engineer} .................. passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And match response contains { "name":Shruti, "job":Software Engineer} ..... passed
+And print "Created at " + response.createdAt .............................. passed
+And print "id of new user is " + response.id .............................. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base ............................................................ passed
+When request { "name": Shreya, "job": Student} ............................ passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And match response contains { "name":Shreya, "job":Student} ............... passed
+And print "Created at " + response.createdAt .............................. passed
+And print "id of new user is " + response.id .............................. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base + 4 ........................................................ passed
+When method delete ........................................................ passed
+Then status 204 ........................................................... passed
+Then match response == '' ................................................. passed</system-out>
+  </testcase>
+  <testcase classname="src.test.resources.features.reqres" name="04 Test delete user" time="0.573332">
+    <system-out>Given def Base = 'https://reqres.in/api/users' ............................ passed
+* url Base + '?page=2' .................................................... passed
+When method GET ........................................................... passed
+And status 200 ............................................................ passed
+Then def len1 = response.data.length ...................................... passed
+Given url Base ............................................................ passed
+When method GET ........................................................... passed
+And status 200 ............................................................ passed
+Then def len2 = response.data.length ...................................... passed
+Then assert len1+len2 == 12 ............................................... passed
+Then assert len1+len2 == response.total ................................... passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base + '/' + 3 .................................................. passed
+When request { "name":"Shruti", "job":"Engineer" } ........................ passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed
+And match response contains { "name":"Shruti", "job":"Engineer" } ......... passed
+And print "Updated at " + response.updatedAt .............................. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base + '/' + 9 .................................................. passed
+When request { "name":"Shruti", "job":"Engineer" } ........................ passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed
+And match response contains { "name":"Shruti", "job":"Engineer" } ......... passed
+And print "Updated at " + response.updatedAt .............................. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base ............................................................ passed
+When request { "name": Shruti, "job": Software Engineer} .................. passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And match response contains { "name":Shruti, "job":Software Engineer} ..... passed
+And print "Created at " + response.createdAt .............................. passed
+And print "id of new user is " + response.id .............................. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base ............................................................ passed
+When request { "name": Shreya, "job": Student} ............................ passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And match response contains { "name":Shreya, "job":Student} ............... passed
+And print "Created at " + response.createdAt .............................. passed
+And print "id of new user is " + response.id .............................. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base + 4 ........................................................ passed
+When method delete ........................................................ passed
+Then status 204 ........................................................... passed
+Then match response == '' ................................................. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base + 10 ....................................................... passed
+When method delete ........................................................ passed
+Then status 204 ........................................................... passed
+Then match response == '' ................................................. passed</system-out>
+  </testcase>
+  <testcase classname="src.test.resources.features.reqres" name="05 Test the single user details" time="0.462148">
+    <system-out>Given def Base = 'https://reqres.in/api/users' ............................ passed
+* url Base + '?page=2' .................................................... passed
+When method GET ........................................................... passed
+And status 200 ............................................................ passed
+Then def len1 = response.data.length ...................................... passed
+Given url Base ............................................................ passed
+When method GET ........................................................... passed
+And status 200 ............................................................ passed
+Then def len2 = response.data.length ...................................... passed
+Then assert len1+len2 == 12 ............................................... passed
+Then assert len1+len2 == response.total ................................... passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base + '/' + 3 .................................................. passed
+When request { "name":"Shruti", "job":"Engineer" } ........................ passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed
+And match response contains { "name":"Shruti", "job":"Engineer" } ......... passed
+And print "Updated at " + response.updatedAt .............................. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base + '/' + 9 .................................................. passed
+When request { "name":"Shruti", "job":"Engineer" } ........................ passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed
+And match response contains { "name":"Shruti", "job":"Engineer" } ......... passed
+And print "Updated at " + response.updatedAt .............................. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base ............................................................ passed
+When request { "name": Shruti, "job": Software Engineer} .................. passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And match response contains { "name":Shruti, "job":Software Engineer} ..... passed
+And print "Created at " + response.createdAt .............................. passed
+And print "id of new user is " + response.id .............................. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base ............................................................ passed
+When request { "name": Shreya, "job": Student} ............................ passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And match response contains { "name":Shreya, "job":Student} ............... passed
+And print "Created at " + response.createdAt .............................. passed
+And print "id of new user is " + response.id .............................. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base + 4 ........................................................ passed
+When method delete ........................................................ passed
+Then status 204 ........................................................... passed
+Then match response == '' ................................................. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base + 10 ....................................................... passed
+When method delete ........................................................ passed
+Then status 204 ........................................................... passed
+Then match response == '' ................................................. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base + '?page=2' ................................................ passed
+And method GET ............................................................ passed
+Then status 200 ........................................................... passed
+Then def record = response.data ........................................... passed
+Then match record contains deep [{first_name:Michael}] .................... passed
+Then def id = get[0] response.data[?(@.first_name=="Michael")].id ......... passed
+Then def email = get[0] response.data[?(@.first_name=="Michael")].email ... passed
+Then def last_name = get[0] response.data[?(@.first_name=="Michael")].last_name . passed
+Then def avatar = get[0] response.data[?(@.first_name=="Michael")].avatar . passed
+Then print id + " " + email + " " + last_name + " " + avatar .............. passed
+Given url Base ............................................................ passed
+And method GET ............................................................ passed
+Then status 200 ........................................................... passed
+Then def record = response.data ........................................... passed
+Then match record contains deep [{first_name:Eve}] ........................ passed
+Then def id = get[0] response.data[?(@.first_name=="Eve")].id ............. passed
+Then def email = get[0] response.data[?(@.first_name=="Eve")].email ....... passed
+Then def last_name = get[0] response.data[?(@.first_name=="Eve")].last_name . passed
+Then def avatar = get[0] response.data[?(@.first_name=="Eve")].avatar ..... passed
+Then print id + " " + email + " " + last_name + " " + avatar .............. passed</system-out>
+  </testcase>
+  <testcase classname="src.test.resources.features.reqres" name="05 Test the single user details" time="0.485735">
+    <system-out>Given def Base = 'https://reqres.in/api/users' ............................ passed
+* url Base + '?page=2' .................................................... passed
+When method GET ........................................................... passed
+And status 200 ............................................................ passed
+Then def len1 = response.data.length ...................................... passed
+Given url Base ............................................................ passed
+When method GET ........................................................... passed
+And status 200 ............................................................ passed
+Then def len2 = response.data.length ...................................... passed
+Then assert len1+len2 == 12 ............................................... passed
+Then assert len1+len2 == response.total ................................... passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base + '/' + 3 .................................................. passed
+When request { "name":"Shruti", "job":"Engineer" } ........................ passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed
+And match response contains { "name":"Shruti", "job":"Engineer" } ......... passed
+And print "Updated at " + response.updatedAt .............................. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base + '/' + 9 .................................................. passed
+When request { "name":"Shruti", "job":"Engineer" } ........................ passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed
+And match response contains { "name":"Shruti", "job":"Engineer" } ......... passed
+And print "Updated at " + response.updatedAt .............................. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base ............................................................ passed
+When request { "name": Shruti, "job": Software Engineer} .................. passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And match response contains { "name":Shruti, "job":Software Engineer} ..... passed
+And print "Created at " + response.createdAt .............................. passed
+And print "id of new user is " + response.id .............................. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base ............................................................ passed
+When request { "name": Shreya, "job": Student} ............................ passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And match response contains { "name":Shreya, "job":Student} ............... passed
+And print "Created at " + response.createdAt .............................. passed
+And print "id of new user is " + response.id .............................. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base + 4 ........................................................ passed
+When method delete ........................................................ passed
+Then status 204 ........................................................... passed
+Then match response == '' ................................................. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base + 10 ....................................................... passed
+When method delete ........................................................ passed
+Then status 204 ........................................................... passed
+Then match response == '' ................................................. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base + '?page=2' ................................................ passed
+And method GET ............................................................ passed
+Then status 200 ........................................................... passed
+Then def record = response.data ........................................... passed
+Then match record contains deep [{first_name:Michael}] .................... passed
+Then def id = get[0] response.data[?(@.first_name=="Michael")].id ......... passed
+Then def email = get[0] response.data[?(@.first_name=="Michael")].email ... passed
+Then def last_name = get[0] response.data[?(@.first_name=="Michael")].last_name . passed
+Then def avatar = get[0] response.data[?(@.first_name=="Michael")].avatar . passed
+Then print id + " " + email + " " + last_name + " " + avatar .............. passed
+Given url Base ............................................................ passed
+And method GET ............................................................ passed
+Then status 200 ........................................................... passed
+Then def record = response.data ........................................... passed
+Then match record contains deep [{first_name:Eve}] ........................ passed
+Then def id = get[0] response.data[?(@.first_name=="Eve")].id ............. passed
+Then def email = get[0] response.data[?(@.first_name=="Eve")].email ....... passed
+Then def last_name = get[0] response.data[?(@.first_name=="Eve")].last_name . passed
+Then def avatar = get[0] response.data[?(@.first_name=="Eve")].avatar ..... passed
+Then print id + " " + email + " " + last_name + " " + avatar .............. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base + '?page=2' ................................................ passed
+And method GET ............................................................ passed
+Then status 200 ........................................................... passed
+Then def record = response.data ........................................... passed
+Then match record contains deep [{first_name:Tobias}] ..................... passed
+Then def id = get[0] response.data[?(@.first_name=="Tobias")].id .......... passed
+Then def email = get[0] response.data[?(@.first_name=="Tobias")].email .... passed
+Then def last_name = get[0] response.data[?(@.first_name=="Tobias")].last_name . passed
+Then def avatar = get[0] response.data[?(@.first_name=="Tobias")].avatar .. passed
+Then print id + " " + email + " " + last_name + " " + avatar .............. passed
+Given url Base ............................................................ passed
+And method GET ............................................................ passed
+Then status 200 ........................................................... passed
+Then def record = response.data ........................................... passed
+Then match record contains deep [{first_name:Tracey}] ..................... passed
+Then def id = get[0] response.data[?(@.first_name=="Tracey")].id .......... passed
+Then def email = get[0] response.data[?(@.first_name=="Tracey")].email .... passed
+Then def last_name = get[0] response.data[?(@.first_name=="Tracey")].last_name . passed
+Then def avatar = get[0] response.data[?(@.first_name=="Tracey")].avatar .. passed
+Then print id + " " + email + " " + last_name + " " + avatar .............. passed</system-out>
+  </testcase>
+  <testcase classname="src.test.resources.features.reqres" name="05 Test the single user details" time="0.171636">
+    <failure message="reqres.feature:63 - path: $[*], actual: [{&quot;last_name&quot;:&quot;Lawson&quot;,&quot;id&quot;:7,&quot;avatar&quot;:&quot;https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/follettkyle\/128.jpg&quot;,&quot;first_name&quot;:&quot;Michael&quot;,&quot;email&quot;:&quot;michael.lawson@reqres.in&quot;},{&quot;last_name&quot;:&quot;Ferguson&quot;,&quot;id&quot;:8,&quot;avatar&quot;:&quot;https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/araa3185\/128.jpg&quot;,&quot;first_name&quot;:&quot;Lindsay&quot;,&quot;email&quot;:&quot;lindsay.ferguson@reqres.in&quot;},{&quot;last_name&quot;:&quot;Funke&quot;,&quot;id&quot;:9,&quot;avatar&quot;:&quot;https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/vivekprvr\/128.jpg&quot;,&quot;first_name&quot;:&quot;Tobias&quot;,&quot;email&quot;:&quot;tobias.funke@reqres.in&quot;},{&quot;last_name&quot;:&quot;Fields&quot;,&quot;id&quot;:10,&quot;avatar&quot;:&quot;https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/russoedu\/128.jpg&quot;,&quot;first_name&quot;:&quot;Byron&quot;,&quot;email&quot;:&quot;byron.fields@reqres.in&quot;},{&quot;last_name&quot;:&quot;Edwards&quot;,&quot;id&quot;:11,&quot;avatar&quot;:&quot;https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/mrmoiree\/128.jpg&quot;,&quot;first_name&quot;:&quot;George&quot;,&quot;email&quot;:&quot;george.edwards@reqres.in&quot;},{&quot;last_name&quot;:&quot;Howell&quot;,&quot;id&quot;:12,&quot;avatar&quot;:&quot;https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/hebertialmeida\/128.jpg&quot;,&quot;first_name&quot;:&quot;Rachel&quot;,&quot;email&quot;:&quot;rachel.howell@reqres.in&quot;}], expected: {first_name=Eve}, reason: actual value does not contain expected">Given def Base = 'https://reqres.in/api/users' ............................ passed
+* url Base + '?page=2' .................................................... passed
+When method GET ........................................................... passed
+And status 200 ............................................................ passed
+Then def len1 = response.data.length ...................................... passed
+Given url Base ............................................................ passed
+When method GET ........................................................... passed
+And status 200 ............................................................ passed
+Then def len2 = response.data.length ...................................... passed
+Then assert len1+len2 == 12 ............................................... passed
+Then assert len1+len2 == response.total ................................... passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base + '/' + 3 .................................................. passed
+When request { "name":"Shruti", "job":"Engineer" } ........................ passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed
+And match response contains { "name":"Shruti", "job":"Engineer" } ......... passed
+And print "Updated at " + response.updatedAt .............................. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base + '/' + 9 .................................................. passed
+When request { "name":"Shruti", "job":"Engineer" } ........................ passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed
+And match response contains { "name":"Shruti", "job":"Engineer" } ......... passed
+And print "Updated at " + response.updatedAt .............................. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base ............................................................ passed
+When request { "name": Shruti, "job": Software Engineer} .................. passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And match response contains { "name":Shruti, "job":Software Engineer} ..... passed
+And print "Created at " + response.createdAt .............................. passed
+And print "id of new user is " + response.id .............................. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base ............................................................ passed
+When request { "name": Shreya, "job": Student} ............................ passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And match response contains { "name":Shreya, "job":Student} ............... passed
+And print "Created at " + response.createdAt .............................. passed
+And print "id of new user is " + response.id .............................. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base + 4 ........................................................ passed
+When method delete ........................................................ passed
+Then status 204 ........................................................... passed
+Then match response == '' ................................................. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base + 10 ....................................................... passed
+When method delete ........................................................ passed
+Then status 204 ........................................................... passed
+Then match response == '' ................................................. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base + '?page=2' ................................................ passed
+And method GET ............................................................ passed
+Then status 200 ........................................................... passed
+Then def record = response.data ........................................... passed
+Then match record contains deep [{first_name:Michael}] .................... passed
+Then def id = get[0] response.data[?(@.first_name=="Michael")].id ......... passed
+Then def email = get[0] response.data[?(@.first_name=="Michael")].email ... passed
+Then def last_name = get[0] response.data[?(@.first_name=="Michael")].last_name . passed
+Then def avatar = get[0] response.data[?(@.first_name=="Michael")].avatar . passed
+Then print id + " " + email + " " + last_name + " " + avatar .............. passed
+Given url Base ............................................................ passed
+And method GET ............................................................ passed
+Then status 200 ........................................................... passed
+Then def record = response.data ........................................... passed
+Then match record contains deep [{first_name:Eve}] ........................ passed
+Then def id = get[0] response.data[?(@.first_name=="Eve")].id ............. passed
+Then def email = get[0] response.data[?(@.first_name=="Eve")].email ....... passed
+Then def last_name = get[0] response.data[?(@.first_name=="Eve")].last_name . passed
+Then def avatar = get[0] response.data[?(@.first_name=="Eve")].avatar ..... passed
+Then print id + " " + email + " " + last_name + " " + avatar .............. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base + '?page=2' ................................................ passed
+And method GET ............................................................ passed
+Then status 200 ........................................................... passed
+Then def record = response.data ........................................... passed
+Then match record contains deep [{first_name:Tobias}] ..................... passed
+Then def id = get[0] response.data[?(@.first_name=="Tobias")].id .......... passed
+Then def email = get[0] response.data[?(@.first_name=="Tobias")].email .... passed
+Then def last_name = get[0] response.data[?(@.first_name=="Tobias")].last_name . passed
+Then def avatar = get[0] response.data[?(@.first_name=="Tobias")].avatar .. passed
+Then print id + " " + email + " " + last_name + " " + avatar .............. passed
+Given url Base ............................................................ passed
+And method GET ............................................................ passed
+Then status 200 ........................................................... passed
+Then def record = response.data ........................................... passed
+Then match record contains deep [{first_name:Tracey}] ..................... passed
+Then def id = get[0] response.data[?(@.first_name=="Tracey")].id .......... passed
+Then def email = get[0] response.data[?(@.first_name=="Tracey")].email .... passed
+Then def last_name = get[0] response.data[?(@.first_name=="Tracey")].last_name . passed
+Then def avatar = get[0] response.data[?(@.first_name=="Tracey")].avatar .. passed
+Then print id + " " + email + " " + last_name + " " + avatar .............. passed
+Given def Base = 'https://reqres.in/api/users' ............................ passed
+Given url Base + '?page=2' ................................................ passed
+And method GET ............................................................ passed
+Then status 200 ........................................................... passed
+Then def record = response.data ........................................... passed
+Then match record contains deep [{first_name:Eve}] ........................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: reqres.feature:63 - path: $[*], actual: [{"last_name":"Lawson","id":7,"avatar":"https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/follettkyle\/128.jpg","first_name":"Michael","email":"michael.lawson@reqres.in"},{"last_name":"Ferguson","id":8,"avatar":"https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/araa3185\/128.jpg","first_name":"Lindsay","email":"lindsay.ferguson@reqres.in"},{"last_name":"Funke","id":9,"avatar":"https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/vivekprvr\/128.jpg","first_name":"Tobias","email":"tobias.funke@reqres.in"},{"last_name":"Fields","id":10,"avatar":"https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/russoedu\/128.jpg","first_name":"Byron","email":"byron.fields@reqres.in"},{"last_name":"Edwards","id":11,"avatar":"https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/mrmoiree\/128.jpg","first_name":"George","email":"george.edwards@reqres.in"},{"last_name":"Howell","id":12,"avatar":"https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/hebertialmeida\/128.jpg","first_name":"Rachel","email":"rachel.howell@reqres.in"}], expected: {first_name=Eve}, reason: actual value does not contain expected&#13;
+	at ✽.Then match record contains deep [{first_name:Eve}] (reqres.feature:63)&#13;
+
+Then def id = get[0] response.data[?(@.first_name=="Eve")].id ............. skipped
+Then def email = get[0] response.data[?(@.first_name=="Eve")].email ....... skipped
+Then def last_name = get[0] response.data[?(@.first_name=="Eve")].last_name . skipped
+Then def avatar = get[0] response.data[?(@.first_name=="Eve")].avatar ..... skipped
+Then print id + " " + email + " " + last_name + " " + avatar .............. skipped
+Given url Base ............................................................ skipped
+And method GET ............................................................ skipped
+Then status 200 ........................................................... skipped
+Then def record = response.data ........................................... skipped
+Then match record contains deep [{first_name:Michael}] .................... skipped
+Then def id = get[0] response.data[?(@.first_name=="Michael")].id ......... skipped
+Then def email = get[0] response.data[?(@.first_name=="Michael")].email ... skipped
+Then def last_name = get[0] response.data[?(@.first_name=="Michael")].last_name . skipped
+Then def avatar = get[0] response.data[?(@.first_name=="Michael")].avatar . skipped
+Then print id + " " + email + " " + last_name + " " + avatar .............. skipped</failure>
+  </testcase>
+</testsuite>

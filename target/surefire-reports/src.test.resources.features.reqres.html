@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta charset="utf-8">
+    
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    
+<link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+<link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    
+<link href="favicon.ico" rel="shortcut icon">
+    
+<script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+<title>src.test.resources.features.reqres</title>
+  
+</head>
+  
+<body>
+    
+<div id="root-container">
+      
+<div id="leftnav">
+        
+<div class="nav-logo">
+          
+<a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+<div class="nav-count">
+            
+<div class="bg-success" id="nav-pass">9</div>
+            
+<div class="bg-danger" id="nav-fail">1</div>
+          
+</div>
+        
+</div>
+        
+<div id="nav-type">Scenarios</div>         
+        
+<div id="nav-date">2020-08-25 03:36:35 PM</div>        
+      
+<div class="nav-container">
+<div class="nav-item passed">
+<a href="#[1:5]">[1:5] 01 Test the GET listUsers </a>
+</div>
+<div class="nav-item passed">
+<a href="#[2.1:28]">[2.1:28] 02 Test update user </a>
+</div>
+<div class="nav-item passed">
+<a href="#[2.2:29]">[2.2:29] 02 Test update user </a>
+</div>
+<div class="nav-item passed">
+<a href="#[3.1:42]">[3.1:42] 03 Test create user </a>
+</div>
+<div class="nav-item passed">
+<a href="#[3.2:43]">[3.2:43] 03 Test create user </a>
+</div>
+<div class="nav-item passed">
+<a href="#[4.1:54]">[4.1:54] 04 Test delete user </a>
+</div>
+<div class="nav-item passed">
+<a href="#[4.2:55]">[4.2:55] 04 Test delete user </a>
+</div>
+<div class="nav-item passed">
+<a href="#[5.1:84]">[5.1:84] 05 Test the single user details </a>
+</div>
+<div class="nav-item passed">
+<a href="#[5.2:85]">[5.2:85] 05 Test the single user details </a>
+</div>
+<div class="nav-item failed">
+<a href="#[5.3:86]">[5.3:86] 05 Test the single user details </a>
+</div>
+</div>
+</div>
+      
+<div id="content">
+      
+<div class="page-heading alert alert-primary">
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">src/test/resources/features/reqres.feature</span><span class="feature-description">Test the reqres api</span>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1:5]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [1:5]</span><span class="scenario-name">01 Test the GET listUsers </span>
+</div>
+<div class="scenario-time passed">ms: 1539</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[1:5]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[1:5]bg">
+<div class="step-container" id="1">
+<div class="step-ref bg-step">1</div>
+<div class="step-cell passed">Given def Base = 'https://reqres.in/api/users'</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="preformatted" data-parent="1">15:36:29.604 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row">
+<div class="step-container" id="2">
+<div class="step-ref passed">2</div>
+<div class="step-cell passed">* url Base + '?page=2'</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="3">
+<div class="step-ref passed">3</div>
+<div class="step-cell passed">When method GET</div>
+</div>
+<div class="time-cell passed">1304</div>
+</div>
+<div class="preformatted" data-parent="3">15:36:30.363 request:
+1 &gt; GET https://reqres.in/api/users?page=2
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: reqres.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_261)
+
+15:36:30.882 response time in milliseconds: 516.30
+1 &lt; 200
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Age: 4273
+1 &lt; CF-Cache-Status: HIT
+1 &lt; CF-RAY: 5c847ff6ee88e31a-CCU
+1 &lt; Cache-Control: max-age=14400
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Tue, 25 Aug 2020 10:06:21 GMT
+1 &lt; Etag: W/"4dd-IPv5LdOOb6s5S9E3i59wBCJ1k/0"
+1 &lt; Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 &lt; Server: cloudflare
+1 &lt; Set-Cookie: __cfduid=d73dc5554622db00e9d13fedd369a9fbf1598349981; expires=Thu, 24-Sep-20 10:06:21 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Vary: Accept-Encoding
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+1 &lt; cf-request-id: 04c6ae4e4f0000e31a64a8c200000001
+{"page":2,"per_page":6,"total":12,"total_pages":2,"data":[{"id":7,"email":"michael.lawson@reqres.in","first_name":"Michael","last_name":"Lawson","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/follettkyle/128.jpg"},{"id":8,"email":"lindsay.ferguson@reqres.in","first_name":"Lindsay","last_name":"Ferguson","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/araa3185/128.jpg"},{"id":9,"email":"tobias.funke@reqres.in","first_name":"Tobias","last_name":"Funke","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/vivekprvr/128.jpg"},{"id":10,"email":"byron.fields@reqres.in","first_name":"Byron","last_name":"Fields","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/russoedu/128.jpg"},{"id":11,"email":"george.edwards@reqres.in","first_name":"George","last_name":"Edwards","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/mrmoiree/128.jpg"},{"id":12,"email":"rachel.howell@reqres.in","first_name":"Rachel","last_name":"Howell","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/hebertialmeida/128.jpg"}],"ad":{"company":"StatusCode Weekly","url":"http://statuscode.org/","text":"A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things."}}</div>
+<div class="step-row">
+<div class="step-container" id="4">
+<div class="step-ref passed">4</div>
+<div class="step-cell passed">And status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="5">
+<div class="step-ref passed">5</div>
+<div class="step-cell passed">Then def len1 = response.data.length</div>
+</div>
+<div class="time-cell passed">25</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="6">
+<div class="step-ref passed">6</div>
+<div class="step-cell passed">Given url Base</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="7">
+<div class="step-ref passed">7</div>
+<div class="step-cell passed">When method GET</div>
+</div>
+<div class="time-cell passed">189</div>
+</div>
+<div class="preformatted" data-parent="7">15:36:30.953 request:
+2 &gt; GET https://reqres.in/api/users
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Cookie: __cfduid=d73dc5554622db00e9d13fedd369a9fbf1598349981
+2 &gt; Host: reqres.in
+2 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_261)
+
+15:36:31.140 response time in milliseconds: 185.57
+2 &lt; 200
+2 &lt; Access-Control-Allow-Origin: *
+2 &lt; Age: 1932
+2 &lt; CF-Cache-Status: HIT
+2 &lt; CF-RAY: 5c847ff8d81ae30e-CCU
+2 &lt; Cache-Control: max-age=14400
+2 &lt; Connection: keep-alive
+2 &lt; Content-Type: application/json; charset=utf-8
+2 &lt; Date: Tue, 25 Aug 2020 10:06:21 GMT
+2 &lt; Etag: W/"4c5-znzuruTKwnH4068T7ikF88YcCME"
+2 &lt; Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+2 &lt; Server: cloudflare
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Vary: Accept-Encoding
+2 &lt; Via: 1.1 vegur
+2 &lt; X-Powered-By: Express
+2 &lt; cf-request-id: 04c6ae4f840000e30e0808b200000001
+{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/olegpogodaev/128.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg"}],"ad":{"company":"StatusCode Weekly","url":"http://statuscode.org/","text":"A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things."}}</div>
+<div class="step-row">
+<div class="step-container" id="8">
+<div class="step-ref passed">8</div>
+<div class="step-cell passed">And status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="9">
+<div class="step-ref passed">9</div>
+<div class="step-cell passed">Then def len2 = response.data.length</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="10">
+<div class="step-ref passed">10</div>
+<div class="step-cell passed">Then assert len1+len2 == 12</div>
+</div>
+<div class="time-cell passed">7</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="11">
+<div class="step-ref passed">11</div>
+<div class="step-cell passed">Then assert len1+len2 == response.total</div>
+</div>
+<div class="time-cell passed">5</div>
+</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[2.1:28]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario Outline: [2.1:28]</span><span class="scenario-name">02 Test update user </span>
+</div>
+<div class="scenario-time passed">ms: 563</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[2.1:28]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[2.1:28]bg">
+<div class="step-container" id="12">
+<div class="step-ref bg-step">12</div>
+<div class="step-cell passed">Given def Base = 'https://reqres.in/api/users'</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="12">15:36:31.160 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row">
+<div class="step-container" id="13">
+<div class="step-ref passed">13</div>
+<div class="step-cell passed">Given url Base + '/' + 3</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="14">
+<div class="step-ref passed">14</div>
+<div class="step-cell passed">When request { "name":"Shruti", "job":"Engineer" }</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="15">
+<div class="step-ref passed">15</div>
+<div class="step-cell passed">When method put</div>
+</div>
+<div class="time-cell passed">542</div>
+</div>
+<div class="preformatted" data-parent="15">15:36:31.168 request:
+1 &gt; PUT https://reqres.in/api/users/3
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 34
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: reqres.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_261)
+{"name":"Shruti","job":"Engineer"}
+
+15:36:31.704 response time in milliseconds: 532.47
+1 &lt; 200
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; CF-Cache-Status: DYNAMIC
+1 &lt; CF-RAY: 5c847ffa1b61e346-CCU
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Tue, 25 Aug 2020 10:06:22 GMT
+1 &lt; Etag: W/"49-3i925/WGAmOcyDN75N1d+iwCWtc"
+1 &lt; Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 &lt; Server: cloudflare
+1 &lt; Set-Cookie: __cfduid=dcdd2c20af5056c61f3c6774c38077faa1598349981; expires=Thu, 24-Sep-20 10:06:21 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Vary: Accept-Encoding
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+1 &lt; cf-request-id: 04c6ae504f0000e34640215200000001
+{"name":"Shruti","job":"Engineer","updatedAt":"2020-08-25T10:06:22.037Z"}</div>
+<div class="step-row">
+<div class="step-container" id="16">
+<div class="step-ref passed">16</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="17">
+<div class="step-ref passed">17</div>
+<div class="step-cell passed">And match response contains { "name":"Shruti", "job":"Engineer" }</div>
+</div>
+<div class="time-cell passed">8</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="18">
+<div class="step-ref passed">18</div>
+<div class="step-cell passed">And print "Updated at " + response.updatedAt</div>
+</div>
+<div class="time-cell passed">10</div>
+</div>
+<div class="preformatted" data-parent="18">15:36:31.725 [print] Updated at 2020-08-25T10:06:22.037Z</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[2.2:29]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario Outline: [2.2:29]</span><span class="scenario-name">02 Test update user </span>
+</div>
+<div class="scenario-time passed">ms: 569</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[2.2:29]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[2.2:29]bg">
+<div class="step-container" id="19">
+<div class="step-ref bg-step">19</div>
+<div class="step-cell passed">Given def Base = 'https://reqres.in/api/users'</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="19">15:36:31.731 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row">
+<div class="step-container" id="20">
+<div class="step-ref passed">20</div>
+<div class="step-cell passed">Given url Base + '/' + 9</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="21">
+<div class="step-ref passed">21</div>
+<div class="step-cell passed">When request { "name":"Shruti", "job":"Engineer" }</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="22">
+<div class="step-ref passed">22</div>
+<div class="step-cell passed">When method put</div>
+</div>
+<div class="time-cell passed">560</div>
+</div>
+<div class="preformatted" data-parent="22">15:36:31.737 request:
+1 &gt; PUT https://reqres.in/api/users/9
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 34
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: reqres.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_261)
+{"name":"Shruti","job":"Engineer"}
+
+15:36:32.294 response time in milliseconds: 554.10
+1 &lt; 200
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; CF-Cache-Status: DYNAMIC
+1 &lt; CF-RAY: 5c847ffdcca4e33a-CCU
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Tue, 25 Aug 2020 10:06:22 GMT
+1 &lt; Etag: W/"49-KZ7dCL9DjPpOa+iHk09SvjZHrjY"
+1 &lt; Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 &lt; Server: cloudflare
+1 &lt; Set-Cookie: __cfduid=d19e2fa68ea5cf5d3c4a7d1366edd750d1598349982; expires=Thu, 24-Sep-20 10:06:22 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Vary: Accept-Encoding
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+1 &lt; cf-request-id: 04c6ae529e0000e33a46065200000001
+{"name":"Shruti","job":"Engineer","updatedAt":"2020-08-25T10:06:22.633Z"}</div>
+<div class="step-row">
+<div class="step-container" id="23">
+<div class="step-ref passed">23</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="24">
+<div class="step-ref passed">24</div>
+<div class="step-cell passed">And match response contains { "name":"Shruti", "job":"Engineer" }</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="25">
+<div class="step-ref passed">25</div>
+<div class="step-cell passed">And print "Updated at " + response.updatedAt</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="preformatted" data-parent="25">15:36:32.302 [print] Updated at 2020-08-25T10:06:22.633Z</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[3.1:42]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario Outline: [3.1:42]</span><span class="scenario-name">03 Test create user </span>
+</div>
+<div class="scenario-time passed">ms: 543</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[3.1:42]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[3.1:42]bg">
+<div class="step-container" id="26">
+<div class="step-ref bg-step">26</div>
+<div class="step-cell passed">Given def Base = 'https://reqres.in/api/users'</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="26">15:36:32.326 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row">
+<div class="step-container" id="27">
+<div class="step-ref passed">27</div>
+<div class="step-cell passed">Given url Base</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="28">
+<div class="step-ref passed">28</div>
+<div class="step-cell passed">When request { "name": Shruti, "job": Software Engineer}</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="29">
+<div class="step-ref passed">29</div>
+<div class="step-cell passed">When method post</div>
+</div>
+<div class="time-cell passed">535</div>
+</div>
+<div class="preformatted" data-parent="29">15:36:32.328 request:
+1 &gt; POST https://reqres.in/api/users
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 43
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: reqres.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_261)
+{"name":"Shruti","job":"Software Engineer"}
+
+15:36:32.861 response time in milliseconds: 531.97
+1 &lt; 201
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; CF-Cache-Status: DYNAMIC
+1 &lt; CF-RAY: 5c8480019fd9e332-CCU
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 93
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Tue, 25 Aug 2020 10:06:23 GMT
+1 &lt; Etag: W/"5d-/N7DdEUXIb76BVSZTyRdqLV+ysg"
+1 &lt; Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 &lt; Server: cloudflare
+1 &lt; Set-Cookie: __cfduid=df0c7178ae47961d94dc68509377291881598349982; expires=Thu, 24-Sep-20 10:06:22 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+1 &lt; cf-request-id: 04c6ae55000000e33262087200000001
+{"name":"Shruti","job":"Software Engineer","id":"165","createdAt":"2020-08-25T10:06:23.222Z"}</div>
+<div class="step-row">
+<div class="step-container" id="30">
+<div class="step-ref passed">30</div>
+<div class="step-cell passed">Then status 201</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="31">
+<div class="step-ref passed">31</div>
+<div class="step-cell passed">And match response contains { "name":Shruti, "job":Software Engineer}</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="32">
+<div class="step-ref passed">32</div>
+<div class="step-cell passed">And print "Created at " + response.createdAt</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="preformatted" data-parent="32">15:36:32.867 [print] Created at 2020-08-25T10:06:23.222Z</div>
+<div class="step-row">
+<div class="step-container" id="33">
+<div class="step-ref passed">33</div>
+<div class="step-cell passed">And print "id of new user is " + response.id</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="preformatted" data-parent="33">15:36:32.869 [print] id of new user is 165</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[3.2:43]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario Outline: [3.2:43]</span><span class="scenario-name">03 Test create user </span>
+</div>
+<div class="scenario-time passed">ms: 503</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[3.2:43]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[3.2:43]bg">
+<div class="step-container" id="34">
+<div class="step-ref bg-step">34</div>
+<div class="step-cell passed">Given def Base = 'https://reqres.in/api/users'</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="34">15:36:32.873 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row">
+<div class="step-container" id="35">
+<div class="step-ref passed">35</div>
+<div class="step-cell passed">Given url Base</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="36">
+<div class="step-ref passed">36</div>
+<div class="step-cell passed">When request { "name": Shreya, "job": Student}</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="37">
+<div class="step-ref passed">37</div>
+<div class="step-cell passed">When method post</div>
+</div>
+<div class="time-cell passed">499</div>
+</div>
+<div class="preformatted" data-parent="37">15:36:32.874 request:
+1 &gt; POST https://reqres.in/api/users
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 33
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: reqres.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_261)
+{"name":"Shreya","job":"Student"}
+
+15:36:33.372 response time in milliseconds: 496.92
+1 &lt; 201
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; CF-Cache-Status: DYNAMIC
+1 &lt; CF-RAY: 5c848004ce58e30e-CCU
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 83
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Tue, 25 Aug 2020 10:06:23 GMT
+1 &lt; Etag: W/"53-CaY3KiXdCbI0mxtdD5rJ8ubSafE"
+1 &lt; Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 &lt; Server: cloudflare
+1 &lt; Set-Cookie: __cfduid=d76923652bd503a01600bb2f5ed7c6a931598349983; expires=Thu, 24-Sep-20 10:06:23 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+1 &lt; cf-request-id: 04c6ae56fa0000e30e16818200000001
+{"name":"Shreya","job":"Student","id":"364","createdAt":"2020-08-25T10:06:23.722Z"}</div>
+<div class="step-row">
+<div class="step-container" id="38">
+<div class="step-ref passed">38</div>
+<div class="step-cell passed">Then status 201</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="39">
+<div class="step-ref passed">39</div>
+<div class="step-cell passed">And match response contains { "name":Shreya, "job":Student}</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="40">
+<div class="step-ref passed">40</div>
+<div class="step-cell passed">And print "Created at " + response.createdAt</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="preformatted" data-parent="40">15:36:33.376 [print] Created at 2020-08-25T10:06:23.722Z</div>
+<div class="step-row">
+<div class="step-container" id="41">
+<div class="step-ref passed">41</div>
+<div class="step-cell passed">And print "id of new user is " + response.id</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="41">15:36:33.378 [print] id of new user is 364</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[4.1:54]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario Outline: [4.1:54]</span><span class="scenario-name">04 Test delete user </span>
+</div>
+<div class="scenario-time passed">ms: 570</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[4.1:54]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[4.1:54]bg">
+<div class="step-container" id="42">
+<div class="step-ref bg-step">42</div>
+<div class="step-cell passed">Given def Base = 'https://reqres.in/api/users'</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="42">15:36:33.386 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row">
+<div class="step-container" id="43">
+<div class="step-ref passed">43</div>
+<div class="step-cell passed">Given url Base + 4</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="44">
+<div class="step-ref passed">44</div>
+<div class="step-cell passed">When method delete</div>
+</div>
+<div class="time-cell passed">548</div>
+</div>
+<div class="preformatted" data-parent="44">15:36:33.393 request:
+1 &gt; DELETE https://reqres.in/api/users4
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: reqres.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_261)
+
+15:36:33.937 response time in milliseconds: 542.98
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; CF-Cache-Status: DYNAMIC
+1 &lt; CF-RAY: 5c8480080fbbe32a-CCU
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 0
+1 &lt; Date: Tue, 25 Aug 2020 10:06:24 GMT
+1 &lt; Etag: W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"
+1 &lt; Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 &lt; Server: cloudflare
+1 &lt; Set-Cookie: __cfduid=d062ad288c927e0909ba1ad57a2c078df1598349984; expires=Thu, 24-Sep-20 10:06:24 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+1 &lt; cf-request-id: 04c6ae59020000e32ad7aff200000001</div>
+<div class="step-row">
+<div class="step-container" id="45">
+<div class="step-ref passed">45</div>
+<div class="step-cell passed">Then status 204</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="46">
+<div class="step-ref passed">46</div>
+<div class="step-cell passed">Then match response == ''</div>
+</div>
+<div class="time-cell passed">18</div>
+</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[4.2:55]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario Outline: [4.2:55]</span><span class="scenario-name">04 Test delete user </span>
+</div>
+<div class="scenario-time passed">ms: 573</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[4.2:55]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[4.2:55]bg">
+<div class="step-container" id="47">
+<div class="step-ref bg-step">47</div>
+<div class="step-cell passed">Given def Base = 'https://reqres.in/api/users'</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="47">15:36:33.972 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row">
+<div class="step-container" id="48">
+<div class="step-ref passed">48</div>
+<div class="step-cell passed">Given url Base + 10</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="49">
+<div class="step-ref passed">49</div>
+<div class="step-cell passed">When method delete</div>
+</div>
+<div class="time-cell passed">568</div>
+</div>
+<div class="preformatted" data-parent="49">15:36:33.978 request:
+1 &gt; DELETE https://reqres.in/api/users10
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: reqres.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_261)
+
+15:36:34.544 response time in milliseconds: 564.51
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; CF-Cache-Status: DYNAMIC
+1 &lt; CF-RAY: 5c84800bdb22e322-CCU
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 0
+1 &lt; Date: Tue, 25 Aug 2020 10:06:24 GMT
+1 &lt; Etag: W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"
+1 &lt; Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 &lt; Server: cloudflare
+1 &lt; Set-Cookie: __cfduid=dd3a709ece65d30d2affb37676c2caf0d1598349984; expires=Thu, 24-Sep-20 10:06:24 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+1 &lt; cf-request-id: 04c6ae5b630000e322bf924200000001</div>
+<div class="step-row">
+<div class="step-container" id="50">
+<div class="step-ref passed">50</div>
+<div class="step-cell passed">Then status 204</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="51">
+<div class="step-ref passed">51</div>
+<div class="step-cell passed">Then match response == ''</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[5.1:84]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario Outline: [5.1:84]</span><span class="scenario-name">05 Test the single user details </span>
+</div>
+<div class="scenario-time passed">ms: 462</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[5.1:84]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[5.1:84]bg">
+<div class="step-container" id="52">
+<div class="step-ref bg-step">52</div>
+<div class="step-cell passed">Given def Base = 'https://reqres.in/api/users'</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="52">15:36:34.567 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row">
+<div class="step-container" id="53">
+<div class="step-ref passed">53</div>
+<div class="step-cell passed">Given url Base + '?page=2'</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="54">
+<div class="step-ref passed">54</div>
+<div class="step-cell passed">And method GET</div>
+</div>
+<div class="time-cell passed">213</div>
+</div>
+<div class="preformatted" data-parent="54">15:36:34.571 request:
+1 &gt; GET https://reqres.in/api/users?page=2
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: reqres.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_261)
+
+15:36:34.779 response time in milliseconds: 205.75
+1 &lt; 200
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Age: 4277
+1 &lt; CF-Cache-Status: HIT
+1 &lt; CF-RAY: 5c84800f7865e33e-CCU
+1 &lt; Cache-Control: max-age=14400
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Tue, 25 Aug 2020 10:06:25 GMT
+1 &lt; Etag: W/"4dd-IPv5LdOOb6s5S9E3i59wBCJ1k/0"
+1 &lt; Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 &lt; Server: cloudflare
+1 &lt; Set-Cookie: __cfduid=dd522a6e0b02b1237d73396eeb363d7561598349985; expires=Thu, 24-Sep-20 10:06:25 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Vary: Accept-Encoding
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+1 &lt; cf-request-id: 04c6ae5dac0000e33e0d143200000001
+{"page":2,"per_page":6,"total":12,"total_pages":2,"data":[{"id":7,"email":"michael.lawson@reqres.in","first_name":"Michael","last_name":"Lawson","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/follettkyle/128.jpg"},{"id":8,"email":"lindsay.ferguson@reqres.in","first_name":"Lindsay","last_name":"Ferguson","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/araa3185/128.jpg"},{"id":9,"email":"tobias.funke@reqres.in","first_name":"Tobias","last_name":"Funke","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/vivekprvr/128.jpg"},{"id":10,"email":"byron.fields@reqres.in","first_name":"Byron","last_name":"Fields","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/russoedu/128.jpg"},{"id":11,"email":"george.edwards@reqres.in","first_name":"George","last_name":"Edwards","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/mrmoiree/128.jpg"},{"id":12,"email":"rachel.howell@reqres.in","first_name":"Rachel","last_name":"Howell","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/hebertialmeida/128.jpg"}],"ad":{"company":"StatusCode Weekly","url":"http://statuscode.org/","text":"A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things."}}</div>
+<div class="step-row">
+<div class="step-container" id="55">
+<div class="step-ref passed">55</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="56">
+<div class="step-ref passed">56</div>
+<div class="step-cell passed">Then def record = response.data</div>
+</div>
+<div class="time-cell passed">6</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="57">
+<div class="step-ref passed">57</div>
+<div class="step-cell passed">Then match record contains deep [{first_name:Michael}]</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="58">
+<div class="step-ref passed">58</div>
+<div class="step-cell passed">Then def id = get[0] response.data[?(@.first_name=="Michael")].id</div>
+</div>
+<div class="time-cell passed">27</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="59">
+<div class="step-ref passed">59</div>
+<div class="step-cell passed">Then def email = get[0] response.data[?(@.first_name=="Michael")].email</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="60">
+<div class="step-ref passed">60</div>
+<div class="step-cell passed">Then def last_name = get[0] response.data[?(@.first_name=="Michael")].last_name</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="61">
+<div class="step-ref passed">61</div>
+<div class="step-cell passed">Then def avatar = get[0] response.data[?(@.first_name=="Michael")].avatar</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="62">
+<div class="step-ref passed">62</div>
+<div class="step-cell passed">Then print id + " " + email + " " + last_name + " " + avatar</div>
+</div>
+<div class="time-cell passed">5</div>
+</div>
+<div class="preformatted" data-parent="62">15:36:34.825 [print] 7 michael.lawson@reqres.in Lawson https://s3.amazonaws.com/uifaces/faces/twitter/follettkyle/128.jpg</div>
+<div class="step-row">
+<div class="step-container" id="63">
+<div class="step-ref passed">63</div>
+<div class="step-cell passed">Given url Base</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="64">
+<div class="step-ref passed">64</div>
+<div class="step-cell passed">And method GET</div>
+</div>
+<div class="time-cell passed">187</div>
+</div>
+<div class="preformatted" data-parent="64">15:36:34.826 request:
+2 &gt; GET https://reqres.in/api/users
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Cookie: __cfduid=dd522a6e0b02b1237d73396eeb363d7561598349985
+2 &gt; Host: reqres.in
+2 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_261)
+
+15:36:35.010 response time in milliseconds: 181.46
+2 &lt; 200
+2 &lt; Access-Control-Allow-Origin: *
+2 &lt; Age: 1936
+2 &lt; CF-Cache-Status: HIT
+2 &lt; CF-RAY: 5c8480110c87e312-CCU
+2 &lt; Cache-Control: max-age=14400
+2 &lt; Connection: keep-alive
+2 &lt; Content-Type: application/json; charset=utf-8
+2 &lt; Date: Tue, 25 Aug 2020 10:06:25 GMT
+2 &lt; Etag: W/"4c5-znzuruTKwnH4068T7ikF88YcCME"
+2 &lt; Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+2 &lt; Server: cloudflare
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Vary: Accept-Encoding
+2 &lt; Via: 1.1 vegur
+2 &lt; X-Powered-By: Express
+2 &lt; cf-request-id: 04c6ae5ea00000e312529ef200000001
+{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/olegpogodaev/128.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg"}],"ad":{"company":"StatusCode Weekly","url":"http://statuscode.org/","text":"A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things."}}</div>
+<div class="step-row">
+<div class="step-container" id="65">
+<div class="step-ref passed">65</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="66">
+<div class="step-ref passed">66</div>
+<div class="step-cell passed">Then def record = response.data</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="67">
+<div class="step-ref passed">67</div>
+<div class="step-cell passed">Then match record contains deep [{first_name:Eve}]</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="68">
+<div class="step-ref passed">68</div>
+<div class="step-cell passed">Then def id = get[0] response.data[?(@.first_name=="Eve")].id</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="69">
+<div class="step-ref passed">69</div>
+<div class="step-cell passed">Then def email = get[0] response.data[?(@.first_name=="Eve")].email</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="70">
+<div class="step-ref passed">70</div>
+<div class="step-cell passed">Then def last_name = get[0] response.data[?(@.first_name=="Eve")].last_name</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="71">
+<div class="step-ref passed">71</div>
+<div class="step-cell passed">Then def avatar = get[0] response.data[?(@.first_name=="Eve")].avatar</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="72">
+<div class="step-ref passed">72</div>
+<div class="step-cell passed">Then print id + " " + email + " " + last_name + " " + avatar</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="72">15:36:35.034 [print] 4 eve.holt@reqres.in Holt https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[5.2:85]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario Outline: [5.2:85]</span><span class="scenario-name">05 Test the single user details </span>
+</div>
+<div class="scenario-time passed">ms: 486</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[5.2:85]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[5.2:85]bg">
+<div class="step-container" id="73">
+<div class="step-ref bg-step">73</div>
+<div class="step-cell passed">Given def Base = 'https://reqres.in/api/users'</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="73">15:36:35.043 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row">
+<div class="step-container" id="74">
+<div class="step-ref passed">74</div>
+<div class="step-cell passed">Given url Base + '?page=2'</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="75">
+<div class="step-ref passed">75</div>
+<div class="step-cell passed">And method GET</div>
+</div>
+<div class="time-cell passed">193</div>
+</div>
+<div class="preformatted" data-parent="75">15:36:35.046 request:
+1 &gt; GET https://reqres.in/api/users?page=2
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: reqres.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_261)
+
+15:36:35.236 response time in milliseconds: 187.14
+1 &lt; 200
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Age: 4277
+1 &lt; CF-Cache-Status: HIT
+1 &lt; CF-RAY: 5c8480125c71e30a-CCU
+1 &lt; Cache-Control: max-age=14400
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Tue, 25 Aug 2020 10:06:25 GMT
+1 &lt; Etag: W/"4dd-IPv5LdOOb6s5S9E3i59wBCJ1k/0"
+1 &lt; Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 &lt; Server: cloudflare
+1 &lt; Set-Cookie: __cfduid=d3be638af17638dd84acb156f005f664c1598349985; expires=Thu, 24-Sep-20 10:06:25 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Vary: Accept-Encoding
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+1 &lt; cf-request-id: 04c6ae5f770000e30abc087200000001
+{"page":2,"per_page":6,"total":12,"total_pages":2,"data":[{"id":7,"email":"michael.lawson@reqres.in","first_name":"Michael","last_name":"Lawson","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/follettkyle/128.jpg"},{"id":8,"email":"lindsay.ferguson@reqres.in","first_name":"Lindsay","last_name":"Ferguson","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/araa3185/128.jpg"},{"id":9,"email":"tobias.funke@reqres.in","first_name":"Tobias","last_name":"Funke","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/vivekprvr/128.jpg"},{"id":10,"email":"byron.fields@reqres.in","first_name":"Byron","last_name":"Fields","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/russoedu/128.jpg"},{"id":11,"email":"george.edwards@reqres.in","first_name":"George","last_name":"Edwards","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/mrmoiree/128.jpg"},{"id":12,"email":"rachel.howell@reqres.in","first_name":"Rachel","last_name":"Howell","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/hebertialmeida/128.jpg"}],"ad":{"company":"StatusCode Weekly","url":"http://statuscode.org/","text":"A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things."}}</div>
+<div class="step-row">
+<div class="step-container" id="76">
+<div class="step-ref passed">76</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="77">
+<div class="step-ref passed">77</div>
+<div class="step-cell passed">Then def record = response.data</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="78">
+<div class="step-ref passed">78</div>
+<div class="step-cell passed">Then match record contains deep [{first_name:Tobias}]</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="79">
+<div class="step-ref passed">79</div>
+<div class="step-cell passed">Then def id = get[0] response.data[?(@.first_name=="Tobias")].id</div>
+</div>
+<div class="time-cell passed">6</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="80">
+<div class="step-ref passed">80</div>
+<div class="step-cell passed">Then def email = get[0] response.data[?(@.first_name=="Tobias")].email</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="81">
+<div class="step-ref passed">81</div>
+<div class="step-cell passed">Then def last_name = get[0] response.data[?(@.first_name=="Tobias")].last_name</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="82">
+<div class="step-ref passed">82</div>
+<div class="step-cell passed">Then def avatar = get[0] response.data[?(@.first_name=="Tobias")].avatar</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="83">
+<div class="step-ref passed">83</div>
+<div class="step-cell passed">Then print id + " " + email + " " + last_name + " " + avatar</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="preformatted" data-parent="83">15:36:35.261 [print] 9 tobias.funke@reqres.in Funke https://s3.amazonaws.com/uifaces/faces/twitter/vivekprvr/128.jpg</div>
+<div class="step-row">
+<div class="step-container" id="84">
+<div class="step-ref passed">84</div>
+<div class="step-cell passed">Given url Base</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="85">
+<div class="step-ref passed">85</div>
+<div class="step-cell passed">And method GET</div>
+</div>
+<div class="time-cell passed">260</div>
+</div>
+<div class="preformatted" data-parent="85">15:36:35.264 request:
+2 &gt; GET https://reqres.in/api/users
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Cookie: __cfduid=d3be638af17638dd84acb156f005f664c1598349985
+2 &gt; Host: reqres.in
+2 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_261)
+
+15:36:35.520 response time in milliseconds: 254.15
+2 &lt; 200
+2 &lt; Access-Control-Allow-Origin: *
+2 &lt; Age: 1936
+2 &lt; CF-Cache-Status: HIT
+2 &lt; CF-RAY: 5c8480141907e2fe-CCU
+2 &lt; Cache-Control: max-age=14400
+2 &lt; Connection: keep-alive
+2 &lt; Content-Type: application/json; charset=utf-8
+2 &lt; Date: Tue, 25 Aug 2020 10:06:25 GMT
+2 &lt; Etag: W/"4c5-znzuruTKwnH4068T7ikF88YcCME"
+2 &lt; Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+2 &lt; Server: cloudflare
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Vary: Accept-Encoding
+2 &lt; Via: 1.1 vegur
+2 &lt; X-Powered-By: Express
+2 &lt; cf-request-id: 04c6ae608d0000e2fed2b81200000001
+{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/olegpogodaev/128.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg"}],"ad":{"company":"StatusCode Weekly","url":"http://statuscode.org/","text":"A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things."}}</div>
+<div class="step-row">
+<div class="step-container" id="86">
+<div class="step-ref passed">86</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="87">
+<div class="step-ref passed">87</div>
+<div class="step-cell passed">Then def record = response.data</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="88">
+<div class="step-ref passed">88</div>
+<div class="step-cell passed">Then match record contains deep [{first_name:Tracey}]</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="89">
+<div class="step-ref passed">89</div>
+<div class="step-cell passed">Then def id = get[0] response.data[?(@.first_name=="Tracey")].id</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="90">
+<div class="step-ref passed">90</div>
+<div class="step-cell passed">Then def email = get[0] response.data[?(@.first_name=="Tracey")].email</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="91">
+<div class="step-ref passed">91</div>
+<div class="step-cell passed">Then def last_name = get[0] response.data[?(@.first_name=="Tracey")].last_name</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="92">
+<div class="step-ref passed">92</div>
+<div class="step-cell passed">Then def avatar = get[0] response.data[?(@.first_name=="Tracey")].avatar</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="93">
+<div class="step-ref passed">93</div>
+<div class="step-cell passed">Then print id + " " + email + " " + last_name + " " + avatar</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="93">15:36:35.535 [print] 6 tracey.ramos@reqres.in Ramos https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[5.3:86]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario Outline: [5.3:86]</span><span class="scenario-name">05 Test the single user details </span>
+</div>
+<div class="scenario-time failed">ms: 172</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[5.3:86]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[5.3:86]bg">
+<div class="step-container" id="94">
+<div class="step-ref bg-step">94</div>
+<div class="step-cell passed">Given def Base = 'https://reqres.in/api/users'</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="94">15:36:35.541 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row">
+<div class="step-container" id="95">
+<div class="step-ref passed">95</div>
+<div class="step-cell passed">Given url Base + '?page=2'</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="96">
+<div class="step-ref passed">96</div>
+<div class="step-cell passed">And method GET</div>
+</div>
+<div class="time-cell passed">168</div>
+</div>
+<div class="preformatted" data-parent="96">15:36:35.543 request:
+1 &gt; GET https://reqres.in/api/users?page=2
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: reqres.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_261)
+
+15:36:35.709 response time in milliseconds: 164.19
+1 &lt; 200
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Age: 4278
+1 &lt; CF-Cache-Status: HIT
+1 &lt; CF-RAY: 5c8480156cf3e30e-CCU
+1 &lt; Cache-Control: max-age=14400
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Tue, 25 Aug 2020 10:06:26 GMT
+1 &lt; Etag: W/"4dd-IPv5LdOOb6s5S9E3i59wBCJ1k/0"
+1 &lt; Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 &lt; Server: cloudflare
+1 &lt; Set-Cookie: __cfduid=d9d0b534a6e561fe6026a15eb6f5e7d0c1598349986; expires=Thu, 24-Sep-20 10:06:26 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Vary: Accept-Encoding
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+1 &lt; cf-request-id: 04c6ae61600000e30e04bf0200000001
+{"page":2,"per_page":6,"total":12,"total_pages":2,"data":[{"id":7,"email":"michael.lawson@reqres.in","first_name":"Michael","last_name":"Lawson","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/follettkyle/128.jpg"},{"id":8,"email":"lindsay.ferguson@reqres.in","first_name":"Lindsay","last_name":"Ferguson","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/araa3185/128.jpg"},{"id":9,"email":"tobias.funke@reqres.in","first_name":"Tobias","last_name":"Funke","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/vivekprvr/128.jpg"},{"id":10,"email":"byron.fields@reqres.in","first_name":"Byron","last_name":"Fields","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/russoedu/128.jpg"},{"id":11,"email":"george.edwards@reqres.in","first_name":"George","last_name":"Edwards","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/mrmoiree/128.jpg"},{"id":12,"email":"rachel.howell@reqres.in","first_name":"Rachel","last_name":"Howell","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/hebertialmeida/128.jpg"}],"ad":{"company":"StatusCode Weekly","url":"http://statuscode.org/","text":"A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things."}}</div>
+<div class="step-row">
+<div class="step-container" id="97">
+<div class="step-ref passed">97</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="98">
+<div class="step-ref passed">98</div>
+<div class="step-cell passed">Then def record = response.data</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="99">
+<div class="step-ref failed">99</div>
+<div class="step-cell failed">Then match record contains deep [{first_name:Eve}]</div>
+</div>
+<div class="time-cell failed">2</div>
+</div>
+<div class="preformatted" data-parent="99">15:36:35.713 assertion failed: path: $[*], actual: [{"last_name":"Lawson","id":7,"avatar":"https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/follettkyle\/128.jpg","first_name":"Michael","email":"michael.lawson@reqres.in"},{"last_name":"Ferguson","id":8,"avatar":"https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/araa3185\/128.jpg","first_name":"Lindsay","email":"lindsay.ferguson@reqres.in"},{"last_name":"Funke","id":9,"avatar":"https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/vivekprvr\/128.jpg","first_name":"Tobias","email":"tobias.funke@reqres.in"},{"last_name":"Fields","id":10,"avatar":"https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/russoedu\/128.jpg","first_name":"Byron","email":"byron.fields@reqres.in"},{"last_name":"Edwards","id":11,"avatar":"https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/mrmoiree\/128.jpg","first_name":"George","email":"george.edwards@reqres.in"},{"last_name":"Howell","id":12,"avatar":"https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/hebertialmeida\/128.jpg","first_name":"Rachel","email":"rachel.howell@reqres.in"}], expected: {first_name=Eve}, reason: actual value does not contain expected
+reqres.feature:63 - path: $[*], actual: [{"last_name":"Lawson","id":7,"avatar":"https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/follettkyle\/128.jpg","first_name":"Michael","email":"michael.lawson@reqres.in"},{"last_name":"Ferguson","id":8,"avatar":"https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/araa3185\/128.jpg","first_name":"Lindsay","email":"lindsay.ferguson@reqres.in"},{"last_name":"Funke","id":9,"avatar":"https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/vivekprvr\/128.jpg","first_name":"Tobias","email":"tobias.funke@reqres.in"},{"last_name":"Fields","id":10,"avatar":"https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/russoedu\/128.jpg","first_name":"Byron","email":"byron.fields@reqres.in"},{"last_name":"Edwards","id":11,"avatar":"https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/mrmoiree\/128.jpg","first_name":"George","email":"george.edwards@reqres.in"},{"last_name":"Howell","id":12,"avatar":"https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/hebertialmeida\/128.jpg","first_name":"Rachel","email":"rachel.howell@reqres.in"}], expected: {first_name=Eve}, reason: actual value does not contain expected</div>
+<div class="step-row">
+<div class="step-container" id="100">
+<div class="step-ref skipped">100</div>
+<div class="step-cell skipped">Then def id = get[0] response.data[?(@.first_name=="Eve")].id</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="101">
+<div class="step-ref skipped">101</div>
+<div class="step-cell skipped">Then def email = get[0] response.data[?(@.first_name=="Eve")].email</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="102">
+<div class="step-ref skipped">102</div>
+<div class="step-cell skipped">Then def last_name = get[0] response.data[?(@.first_name=="Eve")].last_name</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="103">
+<div class="step-ref skipped">103</div>
+<div class="step-cell skipped">Then def avatar = get[0] response.data[?(@.first_name=="Eve")].avatar</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="104">
+<div class="step-ref skipped">104</div>
+<div class="step-cell skipped">Then print id + " " + email + " " + last_name + " " + avatar</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="105">
+<div class="step-ref skipped">105</div>
+<div class="step-cell skipped">Given url Base</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="106">
+<div class="step-ref skipped">106</div>
+<div class="step-cell skipped">And method GET</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="107">
+<div class="step-ref skipped">107</div>
+<div class="step-cell skipped">Then status 200</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="108">
+<div class="step-ref skipped">108</div>
+<div class="step-cell skipped">Then def record = response.data</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="109">
+<div class="step-ref skipped">109</div>
+<div class="step-cell skipped">Then match record contains deep [{first_name:Michael}]</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="110">
+<div class="step-ref skipped">110</div>
+<div class="step-cell skipped">Then def id = get[0] response.data[?(@.first_name=="Michael")].id</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="111">
+<div class="step-ref skipped">111</div>
+<div class="step-cell skipped">Then def email = get[0] response.data[?(@.first_name=="Michael")].email</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="112">
+<div class="step-ref skipped">112</div>
+<div class="step-cell skipped">Then def last_name = get[0] response.data[?(@.first_name=="Michael")].last_name</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="113">
+<div class="step-ref skipped">113</div>
+<div class="step-cell skipped">Then def avatar = get[0] response.data[?(@.first_name=="Michael")].avatar</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="114">
+<div class="step-ref skipped">114</div>
+<div class="step-cell skipped">Then print id + " " + email + " " + last_name + " " + avatar</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+</div>
+</div>
+    
+</div>   
+  
+</body>
+
+</html>
